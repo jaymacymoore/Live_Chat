@@ -1,0 +1,14 @@
+{
+  "name": "chapter-17---live-chat-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss styles/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

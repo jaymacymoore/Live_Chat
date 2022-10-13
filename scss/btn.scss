@@ -1,0 +1,14 @@
+.btn{
+  background: #43d9be;
+  color: whitesmoke;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &:focus{
+    outline: none !important;
+  }
+
+  &:hover{
+    background: #43d9;
+  }
+}

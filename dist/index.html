@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>Chatper 17 - Live Chat Project</title>
+</head>
+<body>
+
+  <!-- Container & Title -->
+  <div class="container my-4">
+    <h1 class="my-4 text-center">Wizard Chatroom</h1>
+    
+    <!-- Buttons for Chatrom -->
+    <div class="chat-rooms mb-3 text-center">
+      <div class="my-2">Choose a chatroom:</div>
+      <button class="btn" id="general">#general</button>
+      <button class="btn" id="gaming">#gaming</button>
+      <button class="btn" id="music">#music</button>
+      <button class="btn" id="wizards">#wizardstuff</button>
+    </div>
+    
+    <!-- Chat List / Window -->
+    <div class="chat-window">
+      <ul class="chat-list list-group"></ul>
+    </div>
+    
+    <!-- New Chat Form -->
+    <form class="new-chat my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Your message:</div>
+        </div>
+        <input type="text" id="message" class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="Send">
+        </div>
+      </div>
+    </form>
+    
+    <!-- Update Name Form -->
+    <form class="new-name my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Update name:</div>
+        </div>
+        <input type="text" id="name" class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="Update">
+        </div>
+      </div>
+    </form>
+    
+    <!-- Clear Form -->
+    <form class="clear-form my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="update-mssg d-none"></div>
+        </div>
+        <div class="input-group-append">
+          <input type="submit" class="btn btn-clear" value="Clear">
+        </div>
+      </div>
+    </form>
+    
+  </div>
+
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script>
+
+    var config = {
+      apiKey: "AIzaSyA6ilqWdIc0PxVFwRQSZNllNw1-CCTxZ1w",
+      authDomain: "modern-javascript-databases.firebaseapp.com",
+      projectId: "modern-javascript-databases",
+      storageBucket: "modern-javascript-databases.appspot.com",
+      messagingSenderId: "1069293593012",
+      appId: "1:1069293593012:web:201485c0e6cbb357e912e1",
+      measurementId: "G-23623DJNG3"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+
+  </script>
+
+  <script src="../scripts/chat.js"></script>
+  <script src="../scripts/ui.js"></script>
+  <script src="../scripts/app.js"></script>
+</body>
+</html>

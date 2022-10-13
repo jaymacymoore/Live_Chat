@@ -1,0 +1,18 @@
+form{
+  .btn{
+    margin-left: 1rem;
+  }
+
+  input[type="text"]{
+    max-width: 341px;
+    margin-left: 1rem !important;
+  }
+}
+
+.clear-form{
+  .input-group{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -1rem;
+  }
+}
